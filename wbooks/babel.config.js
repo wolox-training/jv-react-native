@@ -13,7 +13,7 @@ module.exports = {
           '@config': '.src/config',
           '@interfaces': '.src/interfaces',
           '@redux': '.src/redux',
-          '@services': '.src/redux',
+          '@services': '.src/services',
           '@utils': '.src/utils',
           '@assets': '.src/app/assets',
           '@components': '.src/app/components',
