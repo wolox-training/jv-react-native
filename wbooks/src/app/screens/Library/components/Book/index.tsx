@@ -15,11 +15,13 @@ function Book({ book: { title, author, imageUrl } }: Props) {
     <View style={styles.bookCard}>
       <Image
         style={styles.imgBook}
-        resizeMode="contain"
+        resizeMode="cover"
         source={{ uri: imageUrl ? imageUrl : PLACEHOLDER_IMAGE }}
       />
       <View style={styles.infoBook}>
-        <Text style={styles.titleBook}>{title}</Text>
+        <Text numberOfLines={1} style={styles.titleBook}>
+          {title}
+        </Text>
         <Text style={styles.authorBook}>{author}</Text>
       </View>
     </View>

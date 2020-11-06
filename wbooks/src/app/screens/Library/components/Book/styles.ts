@@ -3,11 +3,11 @@ import { darkGrey, white, black } from '@constants/colors';
 
 export default StyleSheet.create({
   bookCard: {
-    flex: 1,
     flexDirection: 'row',
-    margin: 25,
-    padding: 25,
-    paddingBottom: 85,
+    marginVertical: 10,
+    marginHorizontal: 20,
+    paddingVertical: 15,
+    paddingHorizontal: 20,
     backgroundColor: white,
     borderRadius: 10,
     shadowColor: black,
@@ -20,7 +20,8 @@ export default StyleSheet.create({
     elevation: 1
   },
   infoBook: {
-    marginLeft: 20
+    paddingLeft: 20,
+    flex: 1
   },
   titleBook: {
     fontSize: 16,
@@ -29,10 +30,12 @@ export default StyleSheet.create({
   },
   authorBook: {
     fontSize: 14,
+    marginTop: 4,
     color: darkGrey
   },
   imgBook: {
-    width: 39,
+    marginLeft: 10,
+    width: 40,
     height: 60
   }
 });
