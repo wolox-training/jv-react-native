@@ -1,34 +1,38 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
+import { darkGrey, white, black } from '@constants/colors';
 
 export default StyleSheet.create({
-    bookCard: {
-        backgroundColor: '#FFFFFF',
-        minHeight: 90,
-        margin: 20,
-        marginTop: 50,
-        borderRadius: 10,
+  bookCard: {
+    flex: 1,
+    flexDirection: 'row',
+    margin: 25,
+    padding: 25,
+    paddingBottom: 85,
+    backgroundColor: white,
+    borderRadius: 10,
+    shadowColor: black,
+    shadowOpacity: 0.05,
+    shadowOffset: {
+      width: 0,
+      height: 1
     },
-    containerBook:{
-        flex: 1,
-        flexDirection: 'row',
-        marginLeft: 40,
-        marginTop: 15,
-        paddingBottom: 10,
-    },
-    infoBook: {
-        marginLeft: 20,
-        color: '#4A4A4A',
-    },
-    titleBook:{
-        fontSize: 16,
-        maxWidth: 180,
-        fontWeight: 'bold',
-    },
-    authorBook: {
-        fontSize: 14,
-    },
-    imgBook: {
-        width: 39,
-        height: 60,
-    }
+    shadowRadius: 1,
+    elevation: 1
+  },
+  infoBook: {
+    marginLeft: 20
+  },
+  titleBook: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: darkGrey
+  },
+  authorBook: {
+    fontSize: 14,
+    color: darkGrey
+  },
+  imgBook: {
+    width: 39,
+    height: 60
+  }
 });
