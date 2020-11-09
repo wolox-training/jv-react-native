@@ -10,15 +10,15 @@ module.exports = {
         alias: {
           '@app': './src/app',
           '@constants': './src/constants',
-          '@config': '.src/config',
-          '@interfaces': '.src/interfaces',
-          '@redux': '.src/redux',
-          '@services': '.src/services',
-          '@utils': '.src/utils',
-          '@assets': '.src/app/assets',
-          '@components': '.src/app/components',
-          '@hooks': '.src/app/hooks',
-          '@screens': '.src/app/screens'
+          '@config': './src/config',
+          '@interfaces': './src/interfaces',
+          '@redux': './src/redux',
+          '@services': './src/services',
+          '@utils': './src/utils',
+          '@assets': './src/app/assets',
+          '@components': './src/app/components',
+          '@hooks': './src/app/hooks',
+          '@screens': './src/app/screens'
         }
       }
     ]
