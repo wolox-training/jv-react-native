@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
+import Library from '@screens/Library';
 
-import Library from './screens/Library';
 import styles from './styles';
 
 function App() {
