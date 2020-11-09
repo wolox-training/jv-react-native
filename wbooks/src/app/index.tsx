@@ -1,8 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
-import { BOOKS_MOCK } from '@constants/mockBooks';
-import Book from '@screens/Library/components/Book';
 
+import Library from './screens/Library';
 import styles from './styles';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.body}>
-        <Book book={BOOKS_MOCK[0]} />
+        <Library />
       </SafeAreaView>
     </>
   );
