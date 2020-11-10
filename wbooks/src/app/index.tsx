@@ -1,6 +1,6 @@
 import React from 'react';
-import Library from '@screens/Library';
 import { StatusBar } from 'react-native';
+import Library from '@screens/Library';
 
 function App() {
   return (
