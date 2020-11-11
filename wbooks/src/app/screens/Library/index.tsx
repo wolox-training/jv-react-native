@@ -1,22 +1,23 @@
 import React from 'react';
 import { FlatList, ListRenderItem, SafeAreaView } from 'react-native';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { BOOKS_MOCK } from '@constants/mockBooks';
+import Routes from '@constants/routes';
 import { Book as IBook } from '@interfaces/book';
+import { HomeScreenNavigationProp } from '@interfaces/navigation';
 
 import Book from './components/Book';
 import styles from './styles';
 
-function Library({ navigation }: any) {
+interface Props {
+  navigation: HomeScreenNavigationProp;
+}
+
+function Library({ navigation }: Props) {
   const renderKeyBook = ({ id }: IBook) => `${id}`;
-  const onPressItem = (item: IBook) => {
-    navigation.navigate('Detail', item);
+  const handlePressItem = (item: IBook) => {
+    navigation.navigate(Routes.Detail, item);
   };
-  const renderBook: ListRenderItem<IBook> = ({ item }) => (
-    <TouchableWithoutFeedback onPress={() => onPressItem(item)}>
-      <Book book={item} />
-    </TouchableWithoutFeedback>
-  );
+  const renderBook: ListRenderItem<IBook> = ({ item }) => <Book book={item} onPress={handlePressItem} />;
   return (
     <SafeAreaView style={styles.body}>
       <FlatList data={BOOKS_MOCK} renderItem={renderBook} keyExtractor={renderKeyBook} />

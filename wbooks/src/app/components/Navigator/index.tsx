@@ -1,12 +1,10 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Library from '@app/screens/Library';
+import Library from '@screens/Library';
+import DetailBook from '@screens/DetailBook';
 
 const Stack = createStackNavigator();
-
-const DetailBook = () => <Text>Hello from deatil</Text>;
 
 function AppNavigator() {
   return (
