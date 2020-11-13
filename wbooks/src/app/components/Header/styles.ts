@@ -5,6 +5,6 @@ export default StyleSheet.create({
   image: {
     height: 102,
     marginBottom: 21,
-    width: SIZE.FULL_WITH
+    width: SIZE.FULL_WIDTH
   }
 });
