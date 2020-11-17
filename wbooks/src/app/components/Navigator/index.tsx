@@ -4,9 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Routes from '@constants/routes';
 import Library from '@screens/Library';
 import DetailBook from '@screens/DetailBook';
-import Header from '@components/Header';
 import BackIcon from '@components/BackIcon';
-import TextHeader from '@components/TextHeader';
+import { stackNavigatorConfig } from '@config/navigator';
 
 const Stack = createStackNavigator();
 
@@ -17,18 +16,15 @@ function AppNavigator() {
         <Stack.Screen
           name={Routes.Home}
           component={Library}
-          options={{
-            headerBackground: () => <Header />,
-            headerTitle: () => <TextHeader title="Library" />
-          }}
+          options={{ ...stackNavigatorConfig, headerTitle: 'Library' }}
         />
         <Stack.Screen
           name={Routes.Detail}
           component={DetailBook}
           options={{
-            headerBackground: () => <Header />,
-            headerTitle: () => <TextHeader title="Book Detail" />,
-            headerBackImage: () => <BackIcon />,
+            ...stackNavigatorConfig,
+            headerTitle: 'Book Detail',
+            headerBackImage: BackIcon,
             headerBackTitleVisible: false
           }}
         />

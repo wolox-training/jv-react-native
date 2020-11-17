@@ -1,11 +1,11 @@
 import React from 'react';
 import { Image } from 'react-native';
-import { IMAGES } from '@constants/images';
+import icBack from '@assets/images/icBack.png';
 
 import styles from './styles';
 
 function BackIcon() {
-  return <Image style={styles.image} source={IMAGES.backIcon} />;
+  return <Image source={icBack} style={styles.image} />;
 }
 
 export default BackIcon;
